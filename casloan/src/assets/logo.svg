@@ -1,0 +1,77 @@
+<svg viewBox="0 0 380 100" xmlns="http://www.w3.org/2000/svg" width="380" height="100">
+  <defs>
+    <linearGradient id="deepBlue" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#003366;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0055a5;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="richGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#c9a961;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#f4d88a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c9a961;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  
+  <!-- Premium bank building icon -->
+  <g filter="url(#shadow)">
+    <!-- Solid foundation base -->
+    <rect x="10" y="82" width="80" height="8" fill="#001a33" rx="2"/>
+    
+    <!-- Four grand columns -->
+    <g>
+      <rect x="17" y="42" width="12" height="40" fill="url(#deepBlue)"/>
+      <rect x="33" y="42" width="12" height="40" fill="url(#deepBlue)"/>
+      <rect x="49" y="42" width="12" height="40" fill="url(#deepBlue)"/>
+      <rect x="65" y="42" width="12" height="40" fill="url(#deepBlue)"/>
+    </g>
+    
+    <!-- Golden column capitals -->
+    <g fill="url(#richGold)">
+      <rect x="15" y="39" width="16" height="3.5"/>
+      <rect x="31" y="39" width="16" height="3.5"/>
+      <rect x="47" y="39" width="16" height="3.5"/>
+      <rect x="63" y="39" width="16" height="3.5"/>
+    </g>
+    
+    <!-- Main architrave beam -->
+    <rect x="12" y="32" width="76" height="7" fill="#001a33"/>
+    <rect x="12" y="31" width="76" height="2" fill="url(#richGold)" opacity="0.9"/>
+    
+    <!-- Classical pediment -->
+    <path d="M 8 32 L 50 10 L 92 32 Z" fill="url(#richGold)"/>
+    <path d="M 12 32 L 50 14 L 88 32 Z" fill="url(#deepBlue)" opacity="0.95"/>
+    
+    <!-- Central medallion -->
+    <circle cx="50" cy="23" r="11" fill="white" stroke="url(#richGold)" stroke-width="2.5"/>
+    <text x="50" y="30" font-family="'Garamond', 'Georgia', serif" font-size="16" font-weight="700" fill="#003366" text-anchor="middle">C</text>
+    
+    <!-- Elegant entrance -->
+    <rect x="43" y="62" width="14" height="20" fill="#001a33"/>
+    <rect x="43" y="62" width="14" height="2" fill="url(#richGold)"/>
+    <circle cx="54" cy="72" r="1.5" fill="url(#richGold)"/>
+  </g>
+  
+  <!-- Bold, clear typography -->
+  <g>
+    <!-- CBE - Strong and prominent -->
+    <text x="110" y="55" font-family="'Garamond', 'Georgia', serif" font-size="48" font-weight="700" letter-spacing="4" fill="#001a33">
+      CBE
+    </text>
+    
+    <!-- LOAN - Clear secondary -->
+    <text x="225" y="55" font-family="'Garamond', 'Georgia', serif" font-size="48" font-weight="400" letter-spacing="6" fill="#0055a5">
+      LOAN
+    </text>
+    
+    <!-- Premium double separator -->
+    <rect x="110" y="65" width="260" height="2.5" fill="url(#richGold)"/>
+    <rect x="110" y="70" width="260" height="1" fill="#0055a5" opacity="0.4"/>
+  </g>
+  
+  <!-- Clear, visible tagline -->
+  <text x="110" y="88" font-family="'Garamond', 'Georgia', serif" font-size="14" font-weight="700" letter-spacing="4" fill="#2c3e50">
+    FINANCIAL SOLUTIONS
+  </text>
+</svg>

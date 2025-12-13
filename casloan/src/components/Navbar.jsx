@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../assets/logo.svg';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,9 +33,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16 px-4 max-w-7xl mx-auto">
           {/* Logo */}
           <Link to="/" className="flex items-center group">
-            <span className="text-2xl font-bold text-blue-600 group-hover:text-blue-700 transition-smooth flex items-center gap-2">
-              🏦 CbeLOANS
-            </span>
+            <img src={logo} alt="CBE LOAN - Financial Solutions" className="h-14 group-hover:scale-[1.02] transition-all duration-300 drop-shadow-lg" />
           </Link>
 
           {/* Desktop Navigation */}
