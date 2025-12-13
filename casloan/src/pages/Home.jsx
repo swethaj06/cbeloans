@@ -454,14 +454,41 @@ export default function Home() {
               <div className="mb-8">
                 <label className="block text-gray-800 font-bold mb-3 text-lg">Loan Amount: <span className="text-yellow-600">₹{principal.toLocaleString()}</span></label>
                 <input type="range" min="100000" max="10000000" step="100000" value={principal} onChange={(e) => setPrincipal(e.target.value)} className="w-full h-3 bg-gray-300 rounded-lg appearance-none cursor-pointer hover:bg-gray-400 transition-smooth" />
+                <input 
+                  type="number" 
+                  value={principal} 
+                  onChange={(e) => setPrincipal(e.target.value || 0)} 
+                  className="w-full mt-3 px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent text-gray-800" 
+                  placeholder="Enter loan amount"
+                />
               </div>
               <div className="mb-8">
                 <label className="block text-gray-800 font-bold mb-3 text-lg">Interest Rate: <span className="text-yellow-600">{rate.toFixed(2)}% p.a.</span></label>
                 <input type="range" min="3" max="15" step="0.1" value={rate} onChange={(e) => setRate(e.target.value)} className="w-full h-3 bg-gray-300 rounded-lg appearance-none cursor-pointer hover:bg-gray-400 transition-smooth" />
+                <input 
+                  type="number" 
+                  value={rate} 
+                  onChange={(e) => setRate(e.target.value || 0)} 
+                  step="0.1"
+                  min="3"
+                  max="15"
+                  className="w-full mt-3 px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent text-gray-800" 
+                  placeholder="Enter interest rate"
+                />
               </div>
               <div className="mb-8">
                 <label className="block text-gray-800 font-bold mb-3 text-lg">Tenure: <span className="text-yellow-600">{tenure} Years</span></label>
                 <input type="range" min="1" max="30" step="1" value={tenure} onChange={(e) => setTenure(e.target.value)} className="w-full h-3 bg-gray-300 rounded-lg appearance-none cursor-pointer hover:bg-gray-400 transition-smooth" />
+                <input 
+                  type="number" 
+                  value={tenure} 
+                  onChange={(e) => setTenure(e.target.value || 0)} 
+                  step="1"
+                  min="1"
+                  max="30"
+                  className="w-full mt-3 px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent text-gray-800" 
+                  placeholder="Enter tenure in years"
+                />
               </div>
             </div>
 
