@@ -11,6 +11,7 @@ export default function Contact() {
   });
 
   const [hoveredCard, setHoveredCard] = useState(null);
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -20,18 +21,38 @@ export default function Contact() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    alert('Thank you for your interest! Our loan expert will contact you shortly.');
-    setFormData({
-      name: '',
-      mobileNumber: '',
-      productType: '',
-      loanAmount: '',
-      city: '',
-      employmentType: ''
-    });
+    try {
+      const response = await fetch('http://localhost:5000/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setShowSuccessModal(true);
+        setFormData({
+          name: '',
+          mobileNumber: '',
+          productType: '',
+          loanAmount: '',
+          city: '',
+          employmentType: ''
+        });
+        setTimeout(() => setShowSuccessModal(false), 5000);
+      } else {
+        alert('Error submitting form. Please try again.');
+        console.error('Form submission error:', data);
+      }
+    } catch (error) {
+      alert('Error submitting form. Please ensure the backend is running.');
+      console.error('Form submission error:', error);
+    }
   };
 
   const contactMethods = [
@@ -64,6 +85,68 @@ export default function Contact() {
 
   return (
     <div className="w-full bg-linear-to-b from-blue-50 via-white to-blue-50">
+      {/* Success Modal */}
+      {showSuccessModal && (
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4 animate-fadeInUp">
+          <div className="bg-white rounded-3xl shadow-2xl overflow-hidden max-w-md w-full transform transition-all duration-300 animate-slideInUp">
+            {/* Header Gradient */}
+            <div className="bg-linear-to-r from-green-500 to-emerald-600 px-8 py-12 text-center relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+              <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full translate-y-1/2 -translate-x-1/2"></div>
+              
+              {/* Success Icon Animation */}
+              <div className="relative z-10 flex justify-center mb-6">
+                <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center animate-bounce">
+                  <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+              </div>
+
+              <h2 className="text-3xl font-black text-white mb-2">Success!</h2>
+              <p className="text-green-50 text-lg font-semibold">Application Submitted</p>
+            </div>
+
+            {/* Content */}
+            <div className="px-8 py-8 text-center">
+              <p className="text-gray-700 text-lg mb-3 font-semibold">
+                Thank you for your interest!
+              </p>
+              <p className="text-gray-600 mb-8 leading-relaxed">
+                Your loan application has been received successfully. Our expert team will review your details and contact you within <span className="font-bold text-blue-600">24 hours</span> with personalized loan options.
+              </p>
+
+              {/* Details Grid */}
+              <div className="grid grid-cols-2 gap-4 mb-8">
+                <div className="bg-green-50 rounded-2xl p-4 border border-green-200">
+                  <div className="text-2xl mb-2">📝</div>
+                  <p className="text-xs font-semibold text-gray-700">Application</p>
+                  <p className="text-sm font-bold text-green-600">Received</p>
+                </div>
+                <div className="bg-blue-50 rounded-2xl p-4 border border-blue-200">
+                  <div className="text-2xl mb-2">⏱️</div>
+                  <p className="text-xs font-semibold text-gray-700">Response Time</p>
+                  <p className="text-sm font-bold text-blue-600">24 Hours</p>
+                </div>
+              </div>
+
+              {/* CTA Button */}
+              <button
+                onClick={() => setShowSuccessModal(false)}
+                className="w-full bg-linear-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white py-3 rounded-2xl font-bold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              >
+                Done
+              </button>
+
+              {/* Additional Info */}
+              <p className="text-xs text-gray-500 mt-6">
+                📧 Check your email for confirmation details
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Hero Section */}
       <section className="py-20 bg-linear-to-b from-blue-50 to-white text-gray-900 w-full relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600 rounded-full opacity-5 -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
