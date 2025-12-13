@@ -377,80 +377,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section id="why-us" className="py-24 bg-linear-to-br from-slate-900 via-blue-900 to-slate-900 w-full relative overflow-hidden">
-        {/* Decorative background elements */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500 rounded-full opacity-10 -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-purple-500 rounded-full opacity-10 translate-y-1/2 -translate-x-1/2 blur-3xl"></div>
-        
-        <div className="w-full relative z-10">
-          <div className="text-center mb-16 px-4">
-            <div className="inline-block mb-4">
-              <span className="text-yellow-400 text-lg font-bold uppercase tracking-widest">Why Choose Us</span>
-            </div>
-            <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 animate-fadeInUp leading-tight">
-              Why Apply Through <span className="bg-linear-to-r from-yellow-400 to-yellow-300 bg-clip-text text-transparent">CbeLOANS?</span>
-            </h2>
-            <p className="text-xl text-gray-300 mb-2 animate-fadeInUp max-w-3xl mx-auto">300+ years of combined banking expertise dedicated to your financial success</p>
-            <div className="h-1 w-24 bg-linear-to-r from-yellow-400 to-yellow-300 rounded-full mx-auto mt-6"></div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 max-w-7xl mx-auto">
-            {benefits.map((benefit, index) => (
-              <div key={index} style={{ animation: `fadeInUp 0.8s ease-out ${index * 0.1}s both` }} className="group">
-                <div className="bg-white/10 backdrop-blur-lg hover:bg-white/20 rounded-2xl p-8 h-full border border-white/20 transition-all duration-300 hover:border-yellow-400/50 transform hover:-translate-y-2 shadow-xl hover:shadow-2xl">
-                  {/* Icon container */}
-                  <div className="w-16 h-16 bg-linear-to-br from-yellow-400 to-yellow-500 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                    {benefit.icon}
-                  </div>
-                  
-                  {/* Content */}
-                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-yellow-300 transition-smooth">{benefit.title}</h3>
-                  <p className="text-gray-300 text-base leading-relaxed">{benefit.description}</p>
-                  
-                  {/* Bottom accent */}
-                  <div className="mt-6 pt-6 border-t border-white/10">
-                    <div className="flex items-center text-yellow-400 text-sm font-semibold group-hover:gap-2 transition-all duration-300">
-                      Learn more
-                      <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Stats Section */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-7xl mx-auto mt-20 px-4">
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 text-center hover:border-yellow-400/50 transition-all group">
-              <div className="text-4xl md:text-5xl font-bold text-yellow-400 mb-2 group-hover:scale-110 transition-transform">150+</div>
-              <p className="text-gray-300 text-lg">Banking Partners</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 text-center hover:border-yellow-400/50 transition-all group">
-              <div className="text-4xl md:text-5xl font-bold text-yellow-400 mb-2 group-hover:scale-110 transition-transform">24-48</div>
-              <p className="text-gray-300 text-lg">Hour Approval</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 text-center hover:border-yellow-400/50 transition-all group">
-              <div className="text-4xl md:text-5xl font-bold text-yellow-400 mb-2 group-hover:scale-110 transition-transform">0%</div>
-              <p className="text-gray-300 text-lg">Hidden Charges</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 text-center hover:border-yellow-400/50 transition-all group">
-              <div className="text-4xl md:text-5xl font-bold text-yellow-400 mb-2 group-hover:scale-110 transition-transform">100%</div>
-              <p className="text-gray-300 text-lg">Digital Process</p>
-            </div>
-          </div>
-
-          {/* CTA Button */}
-          <div className="text-center mt-16 px-4">
-            <Link to="/contact" onClick={() => setTimeout(() => { document.querySelector('[data-form-section]')?.scrollIntoView({ behavior: 'smooth' }); }, 100)} className="inline-block bg-linear-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-gray-900 px-12 py-4 rounded-xl font-bold text-lg shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300">
-              Start Your Loan Journey Now 🚀
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* About Us and Why Us Cards */}
       <section className="py-20 bg-gray-50 w-full">
         <div className="w-full max-w-7xl mx-auto px-4">
@@ -485,9 +411,9 @@ export default function Home() {
                   <div className="mb-8">
                     <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Cg%3E%3Cellipse fill='%234ADE80' cx='200' cy='200' rx='120' ry='30' opacity='0.3'/%3E%3Ccircle fill='%23FCD34D' cx='150' cy='140' r='35'/%3E%3Crect fill='%2360A5FA' x='130' y='175' width='40' height='60' rx='3'/%3E%3Ccircle fill='%23374151' cx='200' cy='120' r='40'/%3E%3Crect fill='%23374151' x='175' y='160' width='50' height='70' rx='3'/%3E%3Ccircle fill='%23F59E0B' cx='270' cy='135' r='38'/%3E%3Crect fill='white' x='250' y='173' width='40' height='65' rx='3'/%3E%3Cpath fill='%234ADE80' d='M300,230 Q320,250 340,230 L360,230 L360,250 L280,250 L280,230 Z' opacity='0.6'/%3E%3C/g%3E%3C/svg%3E" alt="Work with Us Illustration" className="w-64 h-48 object-contain" />
                   </div>
-                  <h2 className="text-5xl font-bold text-gray-800 mb-4 text-center">Work with Us</h2>
+                  <h2 className="text-5xl font-bold text-gray-800 mb-4 text-center">Why with Us</h2>
                   <p className="text-xl text-gray-700 text-center font-medium">
-                    Want to Join Team CbeLOANS?
+                    Want to Join CbeLOANS?
                   </p>
                 </div>
                 <div className="bg-white mx-8 mb-8 rounded-xl shadow-lg transform transition-all duration-300 group-hover:translate-y-[-4px]">

@@ -116,7 +116,7 @@ export default function Products() {
                     {product.title}
                   </h3>
                   
-                  <p className="text-gray-600 text-sm mb-6 line-clamp-3 leading-relaxed flex-grow group-hover:text-gray-700 transition-colors duration-300">
+                  <p className="text-gray-600 text-sm mb-6 line-clamp-3 leading-relaxed grow group-hover:text-gray-700 transition-colors duration-300">
                     {product.description}
                   </p>
 

@@ -38,34 +38,18 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-2 items-center">
-            {/* Home Dropdown */}
+            {/* Home Link with Dropdown */}
             <div className="relative group">
-              <button className="px-4 py-2 text-gray-700 font-semibold relative hover:text-blue-600 transition-smooth flex items-center gap-1 group-hover:text-blue-600 rounded-lg hover:bg-blue-50">
+              <Link to="/" className="px-4 py-2 text-gray-700 font-semibold relative hover:text-blue-600 transition-smooth flex items-center gap-1 rounded-lg hover:bg-blue-50">
                 Home
                 <svg className="w-4 h-4 group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                 </svg>
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-linear-to-r from-yellow-400 to-yellow-500 group-hover:w-full transition-all duration-300"></span>
-              </button>
+              </Link>
               
               {/* Dropdown Menu */}
               <div className="absolute left-0 mt-0 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-2 z-50 border border-gray-100">
-                <div className="px-4 py-3 border-b border-gray-200 bg-blue-50">
-                  <p className="text-xs font-bold text-blue-600 uppercase tracking-wide">⚡ Quick Links</p>
-                </div>
-                {footerLinks.map((link, index) => (
-                  <Link
-                    key={index}
-                    to={link.path}
-                    className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-smooth font-medium relative group/item"
-                  >
-                    {link.label}
-                    <span className="absolute bottom-3 left-4 w-0 h-0.5 bg-blue-600 group-hover/item:w-full transition-all duration-300"></span>
-                  </Link>
-                ))}
-                <div className="px-4 py-3 border-t border-gray-200 bg-green-50 mt-2">
-                  <p className="text-xs font-bold text-green-600 uppercase tracking-wide">💻 Components</p>
-                </div>
                 {components.map((component, index) => (
                   <Link
                     key={index}
@@ -125,30 +109,9 @@ export default function Navbar() {
             </button>
             
             {isHomeDropdownOpen && (
-              <div className="bg-blue-50 py-2 pl-6">
-                <p className="text-xs font-bold text-gray-600 uppercase tracking-wide px-4 py-2">Quick Links</p>
-                {footerLinks.map((link, index) => (
-                  <Link
-                    key={index}
-                    to={link.path}
-                    className="block px-4 py-2 text-gray-700 hover:text-blue-600 text-sm font-medium"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-                <p className="text-xs font-bold text-gray-600 uppercase tracking-wide px-4 py-2 mt-2">Components</p>
-                {components.map((component, index) => (
-                  <Link
-                    key={index}
-                    to={component.path}
-                    className="block px-4 py-2 text-gray-700 hover:text-green-600 text-sm font-medium"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {component.label}
-                  </Link>
-                ))}
-              </div>
+              <Link to="/" className="block px-4 py-2 text-gray-700 hover:text-blue-600 text-sm font-medium bg-blue-50" onClick={() => setIsOpen(false)}>
+                Go to Home
+              </Link>
             )}
 
             <Link to="/about" className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 font-semibold transition-smooth" onClick={() => setIsOpen(false)}>About</Link>
