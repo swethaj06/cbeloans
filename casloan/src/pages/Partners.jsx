@@ -1,33 +1,62 @@
+// Import bank logos from banks folder
+import sbiLogo from '../assets/banks/sbi.svg?url';
+import iciciLogo from '../assets/banks/icici.svg?url';
+import hdfcLogo from '../assets/banks/hdfc.svg?url';
+import axisLogo from '../assets/banks/axis.svg?url';
+import kotakLogo from '../assets/banks/kotak.svg?url';
+import idbiLogo from '../assets/banks/idbi.svg?url';
+import pnbLogo from '../assets/banks/pnb.svg?url';
+import canaraLogo from '../assets/banks/canara.svg?url';
+import bajajLogo from '../assets/banks/bajaj.svg?url';
+import homecreditLogo from '../assets/banks/homecredit.svg?url';
+import cholaLogo from '../assets/banks/chola.svg?url';
+import sundaramLogo from '../assets/banks/sundaram.svg?url';
+import ltLogo from '../assets/banks/lt.svg?url';
+import shriramLogo from '../assets/banks/shriram.svg?url';
+import dhflLogo from '../assets/banks/dhfl.svg?url';
+import iifcLogo from '../assets/banks/iifc.svg?url';
+
 export default function Partners() {
   const banks = [
-    { name: 'State Bank of India', logo: 'SBI' },
-    { name: 'ICICI Bank', logo: 'ICICI' },
-    { name: 'HDFC Bank', logo: 'HDFC' },
-    { name: 'Axis Bank', logo: 'AXIS' },
-    { name: 'Kotak Mahindra Bank', logo: 'KOTAK' },
-    { name: 'IDBI Bank', logo: 'IDBI' },
-    { name: 'PNB', logo: 'PNB' },
-    { name: 'Canara Bank', logo: 'CANARA' },
+    { name: 'State Bank of India', image: sbiLogo },
+    { name: 'ICICI Bank', image: iciciLogo },
+    { name: 'HDFC Bank', image: hdfcLogo },
+    { name: 'Axis Bank', image: axisLogo },
+    { name: 'Kotak Mahindra Bank', image: kotakLogo },
+    { name: 'IDBI Bank', image: idbiLogo },
+    { name: 'Punjab National Bank', image: pnbLogo },
+    { name: 'Canara Bank', image: canaraLogo },
   ];
 
   const nbfcs = [
-    { name: 'Bajaj Finance', logo: 'BAJAJ' },
-    { name: 'Home Credit', logo: 'HCF' },
-    { name: 'Cholamandalam', logo: 'CHOLA' },
-    { name: 'Sundaram Finance', logo: 'SUNDARAM' },
-    { name: 'L&T Finance', logo: 'L&T' },
-    { name: 'Shriram Finance', logo: 'SHRIRAM' },
-    { name: 'DHFL', logo: 'DHFL' },
-    { name: 'IIFC', logo: 'IIFC' },
+    { name: 'Bajaj Finance', image: bajajLogo },
+    { name: 'Home Credit', image: homecreditLogo },
+    { name: 'Cholamandalam', image: cholaLogo },
+    { name: 'Sundaram Finance', image: sundaramLogo },
+    { name: 'L&T Finance', image: ltLogo },
+    { name: 'Shriram Finance', image: shriramLogo },
+    { name: 'DHFL', image: dhflLogo },
+    { name: 'IIFC', image: iifcLogo },
   ];
 
   const BankLogo = ({ bank }) => (
-    <div className="bg-white border border-gray-200 rounded-lg p-6 flex items-center justify-center hover:shadow-lg transition">
-      <div className="text-center">
-        <div className="bg-gray-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-2">
-          <span className="font-bold text-sm text-gray-600">{bank.logo}</span>
+    <div className="bg-white border-2 border-gray-100 rounded-xl p-6 flex items-center justify-center hover:shadow-2xl hover:border-blue-200 hover:-translate-y-1 transition-all duration-300 group cursor-pointer min-h-[180px]">
+      <div className="text-center w-full">
+        <div className="flex items-center justify-center mx-auto mb-4 h-28">
+          <img 
+            src={bank.image} 
+            alt={bank.name}
+            onError={(e) => {
+              e.target.style.display = 'none';
+              e.target.nextSibling.style.display = 'flex';
+            }}
+            className="max-w-full max-h-full w-auto h-auto object-contain group-hover:scale-110 transition-transform duration-300" 
+          />
+          <div className="hidden items-center justify-center w-24 h-24 bg-gradient-to-br from-blue-100 to-blue-200 rounded-lg">
+            <span className="text-2xl font-bold text-blue-700">{bank.name.split(' ').map(w => w[0]).join('')}</span>
+          </div>
         </div>
-        <p className="text-sm font-semibold text-gray-700">{bank.name}</p>
+        <p className="text-sm font-semibold text-gray-800 group-hover:text-blue-600 transition-colors leading-tight">{bank.name}</p>
       </div>
     </div>
   );

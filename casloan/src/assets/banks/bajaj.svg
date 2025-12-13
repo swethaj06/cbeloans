@@ -1,0 +1,13 @@
+<svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bajajBlue" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0047ba;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#003a99;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="200" height="80" fill="white"/>
+  <circle cx="35" cy="35" r="20" fill="url(#bajajBlue)"/>
+  <path d="M 25 35 Q 35 28 45 35" stroke="white" stroke-width="2.5" fill="none"/>
+  <text x="65" y="43" font-family="'Arial Black', sans-serif" font-size="30" font-weight="900" fill="url(#bajajBlue)" letter-spacing="1">BAJAJ</text>
+  <text x="65" y="58" font-family="Arial, sans-serif" font-size="9" font-weight="600" fill="#666" letter-spacing="0.8">FINANCE</text>
+</svg>
