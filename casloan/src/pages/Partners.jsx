@@ -1,20 +1,16 @@
-// Import bank logos from banks folder
-import sbiLogo from '../assets/banks/sbi.svg?url';
-import iciciLogo from '../assets/banks/icici.svg?url';
-import hdfcLogo from '../assets/banks/hdfc.svg?url';
-import axisLogo from '../assets/banks/axis.svg?url';
-import kotakLogo from '../assets/banks/kotak.svg?url';
-import idbiLogo from '../assets/banks/idbi.svg?url';
-import pnbLogo from '../assets/banks/pnb.svg?url';
-import canaraLogo from '../assets/banks/canara.svg?url';
-import bajajLogo from '../assets/banks/bajaj.svg?url';
-import homecreditLogo from '../assets/banks/homecredit.svg?url';
-import cholaLogo from '../assets/banks/chola.svg?url';
-import sundaramLogo from '../assets/banks/sundaram.svg?url';
-import ltLogo from '../assets/banks/lt.svg?url';
-import shriramLogo from '../assets/banks/shriram.svg?url';
-import dhflLogo from '../assets/banks/dhfl.svg?url';
-import iifcLogo from '../assets/banks/iifc.svg?url';
+// Import bank logos from assets
+import sbiLogo from '../assets/sbi.png';
+import iciciLogo from '../assets/icici.jpeg';
+import hdfcLogo from '../assets/hdf.png';
+import axisLogo from '../assets/Axis_Bank.png';
+import kotakLogo from '../assets/kotak.png';
+import idbiLogo from '../assets/indusindbank.png';
+import pnbLogo from '../assets/punjab.jpg';
+import canaraLogo from '../assets/Borado.png';
+import bajajLogo from '../assets/Bajaj.png';
+import idfc from '../assets/idfc.jpg';
+import tataLogo from '../assets/tata.png';
+import yesLogo from '../assets/Yes_Bank.png';
 
 export default function Partners() {
   const banks = [
@@ -23,20 +19,16 @@ export default function Partners() {
     { name: 'HDFC Bank', image: hdfcLogo },
     { name: 'Axis Bank', image: axisLogo },
     { name: 'Kotak Mahindra Bank', image: kotakLogo },
-    { name: 'IDBI Bank', image: idbiLogo },
+    { name: 'IndusInd Bank', image: idbiLogo },
     { name: 'Punjab National Bank', image: pnbLogo },
     { name: 'Canara Bank', image: canaraLogo },
   ];
 
   const nbfcs = [
     { name: 'Bajaj Finance', image: bajajLogo },
-    { name: 'Home Credit', image: homecreditLogo },
-    { name: 'Cholamandalam', image: cholaLogo },
-    { name: 'Sundaram Finance', image: sundaramLogo },
-    { name: 'L&T Finance', image: ltLogo },
-    { name: 'Shriram Finance', image: shriramLogo },
-    { name: 'DHFL', image: dhflLogo },
-    { name: 'IIFC', image: iifcLogo },
+    { name: 'IDFC First Bank', image: idfc },
+    { name: 'Tata Capital', image: tataLogo },
+    { name: 'Yes Bank', image: yesLogo },
   ];
 
   const BankLogo = ({ bank }) => (
