@@ -67,7 +67,7 @@ export default function Home() {
       <HeroSection />
       
       {/* Loans and Cards Section */}
-      <section className="py-20 bg-white w-full border-b border-gray-100">
+      <section id="loans" className="py-20 bg-white w-full border-b border-gray-100">
         <div className="w-full max-w-7xl mx-auto px-4 md:px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-12">Loans and Cards</h2>
           
@@ -449,43 +449,37 @@ export default function Home() {
           <h2 className="text-5xl font-bold text-center text-gray-800 mb-4 px-4 animate-fadeInUp">EMI Calculator</h2>
           <p className="text-lg text-center text-gray-600 mb-12 px-4 animate-fadeInUp">Calculate your monthly EMI and plan your finances</p>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-6xl mx-auto px-4">
-            <div className="bg-linear-to-br from-blue-50 to-gray-50 rounded-2xl shadow-xl p-10 border border-blue-100 hover-lift transition-smooth">
-              <div className="mb-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-6xl mx-auto px-4 relative z-0">
+            <div className="bg-linear-to-br from-blue-50 to-gray-50 rounded-2xl shadow-xl p-10 border border-blue-100 hover-lift transition-smooth relative z-0">
+              <div className="mb-8 relative">
                 <label className="block text-gray-800 font-bold mb-3 text-lg">Loan Amount: <span className="text-yellow-600">₹{principal.toLocaleString()}</span></label>
                 <input type="range" min="100000" max="10000000" step="100000" value={principal} onChange={(e) => setPrincipal(e.target.value)} className="w-full h-3 bg-gray-300 rounded-lg appearance-none cursor-pointer hover:bg-gray-400 transition-smooth" />
                 <input 
-                  type="number" 
+                  type="text" 
                   value={principal} 
-                  onChange={(e) => setPrincipal(e.target.value || 0)} 
+                  onChange={(e) => setPrincipal(e.target.value.replace(/\D/g, '') || 0)} 
                   className="w-full mt-3 px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent text-gray-800" 
                   placeholder="Enter loan amount"
                 />
               </div>
-              <div className="mb-8">
+              <div className="mb-8 relative">
                 <label className="block text-gray-800 font-bold mb-3 text-lg">Interest Rate: <span className="text-yellow-600">{rate.toFixed(2)}% p.a.</span></label>
                 <input type="range" min="3" max="15" step="0.1" value={rate} onChange={(e) => setRate(e.target.value)} className="w-full h-3 bg-gray-300 rounded-lg appearance-none cursor-pointer hover:bg-gray-400 transition-smooth" />
                 <input 
-                  type="number" 
+                  type="text" 
                   value={rate} 
-                  onChange={(e) => setRate(e.target.value || 0)} 
-                  step="0.1"
-                  min="3"
-                  max="15"
+                  onChange={(e) => setRate(e.target.value === '' ? '' : parseFloat(e.target.value.replace(/[^\d.]/g, '')) || 0)} 
                   className="w-full mt-3 px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent text-gray-800" 
                   placeholder="Enter interest rate"
                 />
               </div>
-              <div className="mb-8">
+              <div className="mb-8 relative">
                 <label className="block text-gray-800 font-bold mb-3 text-lg">Tenure: <span className="text-yellow-600">{tenure} Years</span></label>
                 <input type="range" min="1" max="30" step="1" value={tenure} onChange={(e) => setTenure(e.target.value)} className="w-full h-3 bg-gray-300 rounded-lg appearance-none cursor-pointer hover:bg-gray-400 transition-smooth" />
                 <input 
-                  type="number" 
+                  type="text" 
                   value={tenure} 
-                  onChange={(e) => setTenure(e.target.value || 0)} 
-                  step="1"
-                  min="1"
-                  max="30"
+                  onChange={(e) => setTenure(e.target.value.replace(/\D/g, '') || 0)} 
                   className="w-full mt-3 px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent text-gray-800" 
                   placeholder="Enter tenure in years"
                 />

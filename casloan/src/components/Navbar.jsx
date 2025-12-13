@@ -20,11 +20,10 @@ export default function Navbar() {
   ];
 
   const components = [
-    { label: 'Hero Section', path: '/#hero' },
+    { label: 'Hero Section', path: '/#hero-section' },
     { label: 'Loan Cards', path: '/#loans' },
-    { label: 'EMI Calculator', path: '/#emi' },
-    { label: 'Offers', path: '/offers' },
-    { label: 'Documents', path: '/documents' }
+    { label: 'EMI Calculator', path: '/#emi-calculator' },
+    { label: 'Offers', path: '/#offers' }
   ];
 
   return (
@@ -38,30 +37,11 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-2 items-center">
-            {/* Home Link with Dropdown */}
-            <div className="relative group">
-              <Link to="/" className="px-4 py-2 text-gray-700 font-semibold relative hover:text-blue-600 transition-smooth flex items-center gap-1 rounded-lg hover:bg-blue-50">
-                Home
-                <svg className="w-4 h-4 group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                </svg>
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-linear-to-r from-yellow-400 to-yellow-500 group-hover:w-full transition-all duration-300"></span>
-              </Link>
-              
-              {/* Dropdown Menu */}
-              <div className="absolute left-0 mt-0 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-2 z-50 border border-gray-100">
-                {components.map((component, index) => (
-                  <Link
-                    key={index}
-                    to={component.path}
-                    className="block px-4 py-3 text-gray-700 hover:text-green-600 hover:bg-green-50 transition-smooth font-medium text-sm relative group/item"
-                  >
-                    {component.label}
-                    <span className="absolute bottom-3 left-4 w-0 h-0.5 bg-green-600 group-hover/item:w-full transition-all duration-300"></span>
-                  </Link>
-                ))}
-              </div>
-            </div>
+            {/* Home Link */}
+            <Link to="/" className="px-4 py-2 text-gray-700 font-semibold relative hover:text-blue-600 transition-smooth rounded-lg hover:bg-blue-50">
+              Home
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-linear-to-r from-yellow-400 to-yellow-500 group-hover:w-full transition-all duration-300"></span>
+            </Link>
 
             <Link to="/about" className="px-4 py-2 text-gray-700 font-semibold relative group hover:text-blue-600 transition-smooth rounded-lg hover:bg-blue-50">
               About

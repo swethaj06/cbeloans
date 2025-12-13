@@ -63,7 +63,7 @@ export default function HeroSection() {
   };
 
   return (
-    <div className="relative bg-gradient-to-br from-slate-50 via-blue-50/30 to-slate-50 w-full py-20 md:py-28 overflow-hidden">
+    <div id="hero-section" className="relative bg-gradient-to-br from-slate-50 via-blue-50/30 to-slate-50 w-full py-20 md:py-28 overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-200/40 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 animate-pulse"></div>

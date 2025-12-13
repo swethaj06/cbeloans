@@ -72,6 +72,11 @@ export default function Footer() {
           <div className="text-gray-400">
             <p>&copy; 2025 CbeLOANS. All rights reserved.</p>
           </div>
+          <div className="text-center flex-1">
+            <p className="text-gray-400">
+              Built By <a href="https://cubeaisolutions.com/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 transition-smooth font-semibold">CubeAI Solutions</a>
+            </p>
+          </div>
           <div className="flex gap-8">
             <Link to="#" className="text-gray-400 hover:text-white transition-smooth">Privacy Policy</Link>
             <Link to="#" className="text-gray-400 hover:text-white transition-smooth">Terms & Conditions</Link>
