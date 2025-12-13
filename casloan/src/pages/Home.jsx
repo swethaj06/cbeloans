@@ -3,6 +3,19 @@ import { Link } from 'react-router-dom';
 import HeroSection from '../components/HeroSection';
 import LoanCard from '../components/LoanCard';
 import BenefitCard from '../components/BenefitCard';
+// Import bank logos
+import sbiLogo from '../assets/sbi.png';
+import iciciLogo from '../assets/icici.jpeg';
+import hdfcLogo from '../assets/hdf.png';
+import axisLogo from '../assets/Axis_Bank.png';
+import kotakLogo from '../assets/kotak.png';
+import idbiLogo from '../assets/indusindbank.png';
+import pnbLogo from '../assets/punjab.jpg';
+import canaraLogo from '../assets/Borado.png';
+import bajajLogo from '../assets/Bajaj.png';
+import idfc from '../assets/idfc.jpg';
+import tataLogo from '../assets/tata.png';
+import yesLogo from '../assets/Yes_Bank.png';
 
 export default function Home() {
   const [principal, setPrincipal] = useState(1000000);
@@ -441,14 +454,41 @@ export default function Home() {
               <div className="mb-8">
                 <label className="block text-gray-800 font-bold mb-3 text-lg">Loan Amount: <span className="text-yellow-600">₹{principal.toLocaleString()}</span></label>
                 <input type="range" min="100000" max="10000000" step="100000" value={principal} onChange={(e) => setPrincipal(e.target.value)} className="w-full h-3 bg-gray-300 rounded-lg appearance-none cursor-pointer hover:bg-gray-400 transition-smooth" />
+                <input 
+                  type="number" 
+                  value={principal} 
+                  onChange={(e) => setPrincipal(e.target.value || 0)} 
+                  className="w-full mt-3 px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent text-gray-800" 
+                  placeholder="Enter loan amount"
+                />
               </div>
               <div className="mb-8">
                 <label className="block text-gray-800 font-bold mb-3 text-lg">Interest Rate: <span className="text-yellow-600">{rate.toFixed(2)}% p.a.</span></label>
                 <input type="range" min="3" max="15" step="0.1" value={rate} onChange={(e) => setRate(e.target.value)} className="w-full h-3 bg-gray-300 rounded-lg appearance-none cursor-pointer hover:bg-gray-400 transition-smooth" />
+                <input 
+                  type="number" 
+                  value={rate} 
+                  onChange={(e) => setRate(e.target.value || 0)} 
+                  step="0.1"
+                  min="3"
+                  max="15"
+                  className="w-full mt-3 px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent text-gray-800" 
+                  placeholder="Enter interest rate"
+                />
               </div>
               <div className="mb-8">
                 <label className="block text-gray-800 font-bold mb-3 text-lg">Tenure: <span className="text-yellow-600">{tenure} Years</span></label>
                 <input type="range" min="1" max="30" step="1" value={tenure} onChange={(e) => setTenure(e.target.value)} className="w-full h-3 bg-gray-300 rounded-lg appearance-none cursor-pointer hover:bg-gray-400 transition-smooth" />
+                <input 
+                  type="number" 
+                  value={tenure} 
+                  onChange={(e) => setTenure(e.target.value || 0)} 
+                  step="1"
+                  min="1"
+                  max="30"
+                  className="w-full mt-3 px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent text-gray-800" 
+                  placeholder="Enter tenure in years"
+                />
               </div>
             </div>
 
@@ -544,13 +584,32 @@ export default function Home() {
         <div className="w-full">
           <h2 className="text-5xl font-bold text-center text-gray-800 mb-4 px-4 animate-fadeInUp">Our Partner Banks</h2>
           <p className="text-lg text-center text-gray-600 mb-14 px-4 animate-fadeInUp">We work with 150+ leading financial institutions</p>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 px-4">
-            {['SBI', 'ICICI', 'HDFC', 'AXIS', 'KOTAK', 'PNB', 'CANARA', 'IDBI', 'BAJAJ', 'L&T', 'SHRIRAM', 'CHOLA'].map((bank, index) => (
-              <div key={index} style={{ animation: `fadeInUp 0.8s ease-out ${index * 0.05}s both` }} className="bg-white border-2 border-gray-200 rounded-xl p-6 flex items-center justify-center hover:shadow-2xl hover:border-blue-400 transition-smooth hover-lift group">
-                <div className="text-center">
-                  <div className="bg-linear-to-br from-blue-50 to-gray-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3 group-hover:from-blue-100 group-hover:to-blue-50 transition-smooth">
-                    <span className="font-bold text-sm text-gray-700 group-hover:text-blue-600">{bank}</span>
-                  </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 px-4 max-w-7xl mx-auto">
+            {[
+              { name: 'SBI', image: sbiLogo },
+              { name: 'ICICI', image: iciciLogo },
+              { name: 'HDFC', image: hdfcLogo },
+              { name: 'AXIS', image: axisLogo },
+              { name: 'KOTAK', image: kotakLogo },
+              { name: 'PNB', image: pnbLogo },
+              { name: 'CANARA', image: canaraLogo },
+              { name: 'IDBI', image: idbiLogo },
+              { name: 'BAJAJ', image: bajajLogo },
+              { name: 'IDFC', image: idfc },
+              { name: 'TATA', image: tataLogo },
+              { name: 'YES BANK', image: yesLogo },
+            ].map((bank, index) => (
+              <div key={index} style={{ animation: `fadeInUp 0.8s ease-out ${index * 0.05}s both` }} className="bg-white border-2 border-gray-200 rounded-xl p-6 flex items-center justify-center hover:shadow-2xl hover:border-blue-400 transition-smooth hover-lift group min-h-[140px]">
+                <div className="text-center w-full flex flex-col items-center">
+                  <img 
+                    src={bank.image} 
+                    alt={bank.name}
+                    className="h-20 object-contain mb-3 group-hover:scale-110 transition-transform duration-300"
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                    }}
+                  />
+                  <span className="font-bold text-xs text-gray-700 group-hover:text-blue-600 text-center">{bank.name}</span>
                 </div>
               </div>
             ))}
