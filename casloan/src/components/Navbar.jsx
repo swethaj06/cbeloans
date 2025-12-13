@@ -27,13 +27,13 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="bg-white shadow-lg sticky top-0 z-50 w-full transition-smooth">
+    <nav className="bg-white shadow-sm sticky top-0 z-50 w-full transition-smooth border-b border-gray-100">
       <div className="w-full">
-        <div className="flex justify-between items-center h-16 px-4">
+        <div className="flex justify-between items-center h-16 px-4 max-w-7xl mx-auto">
           {/* Logo */}
           <Link to="/" className="flex items-center group">
-            <span className="text-3xl font-bold bg-linear-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent group-hover:from-blue-700 group-hover:to-blue-900 transition-smooth flex items-center gap-2">
-              <span className="text-2xl">🏦</span> CbeLOANS
+            <span className="text-2xl font-bold text-blue-600 group-hover:text-blue-700 transition-smooth flex items-center gap-2">
+              🏦 CbeLOANS
             </span>
           </Link>
 
@@ -99,8 +99,8 @@ export default function Navbar() {
           </div>
 
           {/* CTA Button */}
-          <Link to="/contact" onClick={() => setTimeout(() => { document.querySelector('[data-form-section]')?.scrollIntoView({ behavior: 'smooth' }); }, 100)} className="hidden md:inline-block bg-linear-to-r from-yellow-400 to-yellow-500 text-gray-900 px-8 py-2.5 rounded-lg hover:from-yellow-500 hover:to-yellow-600 transition-smooth font-bold shadow-lg hover:shadow-2xl hover-lift transform hover:scale-105">
-            Apply Now 🚀
+          <Link to="/contact" onClick={() => setTimeout(() => { document.querySelector('[data-form-section]')?.scrollIntoView({ behavior: 'smooth' }); }, 100)} className="hidden md:inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-2.5 rounded-lg font-bold shadow-md hover:shadow-lg transition-all duration-300 text-center">
+            Apply Now
           </Link>
 
           {/* Mobile menu button */}

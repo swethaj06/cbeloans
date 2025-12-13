@@ -2,108 +2,79 @@ import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
-    <footer className="bg-linear-to-b from-gray-900 to-black text-gray-300 py-16 w-full relative overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500 rounded-full opacity-5 -translate-y-1/2 translate-x-1/2"></div>
-      <div className="absolute bottom-0 left-0 w-80 h-80 bg-yellow-400 rounded-full opacity-5 translate-y-1/2 -translate-x-1/2"></div>
-      
-      <div className="w-full relative z-10">
+    <footer className="bg-gray-900 text-gray-300 py-16 w-full">
+      <div className="w-full max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12 px-4">
           {/* Company Info */}
-          <div className="group hover-lift transition-smooth">
-            <h3 className="text-white text-2xl font-bold mb-4 group-hover:text-yellow-400 transition-smooth flex items-center gap-2">
-              <span className="text-3xl">🏦</span> CbeLOANS
-            </h3>
-            <p className="text-sm leading-relaxed mb-2">MaxDSA Business Services P Ltd</p>
-            <p className="text-sm leading-relaxed mb-3">U82990TZ2025PTC035993</p>
-            <p className="text-sm mt-3 leading-relaxed text-gray-400">Transforming how loans are discovered, compared, and disbursed.</p>
+          <div>
+            <h4 className="text-2xl font-bold text-white mb-4">
+              🏦 CbeLOANS
+            </h4>
+            <p className="text-sm leading-relaxed mb-6">
+              India's trusted platform for loans, cards & investments. Compare 150+ products from leading banks.
+            </p>
+            <div className="flex gap-4">
+              <a href="#" className="text-gray-400 hover:text-white transition-smooth">f</a>
+              <a href="#" className="text-gray-400 hover:text-white transition-smooth">𝕏</a>
+              <a href="#" className="text-gray-400 hover:text-white transition-smooth">in</a>
+            </div>
           </div>
 
           {/* Quick Links */}
-          <div className="hover-lift transition-smooth">
-            <h4 className="text-white font-bold mb-4 text-lg flex items-center gap-2">
-              <span className="text-yellow-400">⚡</span> Quick Links
-            </h4>
+          <div>
+            <h5 className="text-white font-bold mb-4 text-lg">Quick Links</h5>
             <ul className="space-y-3 text-sm">
-              <li><Link to="/about" className="text-gray-300 hover:text-yellow-400 transition-smooth font-medium relative group inline-block">
-                About Us
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 group-hover:w-full transition-all duration-300"></span>
-              </Link></li>
-              <li><Link to="/why-us" className="text-gray-300 hover:text-yellow-400 transition-smooth font-medium relative group inline-block">
-                Why Us
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 group-hover:w-full transition-all duration-300"></span>
-              </Link></li>
-              <li><Link to="/products" className="text-gray-300 hover:text-yellow-400 transition-smooth font-medium relative group inline-block">
-                Products
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 group-hover:w-full transition-all duration-300"></span>
-              </Link></li>
-              <li><Link to="/partners" className="text-gray-300 hover:text-yellow-400 transition-smooth font-medium relative group inline-block">
-                Partners
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 group-hover:w-full transition-all duration-300"></span>
-              </Link></li>
+              <li><Link to="/about" className="text-gray-300 hover:text-white transition-smooth">About Us</Link></li>
+              <li><Link to="/why-us" className="text-gray-300 hover:text-white transition-smooth">Why Us</Link></li>
+              <li><Link to="/products" className="text-gray-300 hover:text-white transition-smooth">Products</Link></li>
+              <li><Link to="/contact" className="text-gray-300 hover:text-white transition-smooth">Contact</Link></li>
             </ul>
           </div>
 
           {/* Loan Products */}
-          <div className="hover-lift transition-smooth">
-            <h4 className="text-white font-bold mb-4 text-lg flex items-center gap-2">
-              <span className="text-yellow-400">💳</span> Loan Products
-            </h4>
-            <ul className="space-y-3 text-sm">
-              <li><a href="#home-loan" className="text-gray-300 hover:text-yellow-400 transition-smooth font-medium relative group inline-block">
-                Home Loans
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 group-hover:w-full transition-all duration-300"></span>
-              </a></li>
-              <li><a href="#personal-loan" className="text-gray-300 hover:text-yellow-400 transition-smooth font-medium relative group inline-block">
-                Personal Loans
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 group-hover:w-full transition-all duration-300"></span>
-              </a></li>
-              <li><a href="#car-loan" className="text-gray-300 hover:text-yellow-400 transition-smooth font-medium relative group inline-block">
-                Car Loans
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 group-hover:w-full transition-all duration-300"></span>
-              </a></li>
-              <li><a href="#emi-calculator" className="text-gray-300 hover:text-yellow-400 transition-smooth font-medium relative group inline-block">
-                EMI Calculator
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 group-hover:w-full transition-all duration-300"></span>
-              </a></li>
+          <div>
+            <h5 className="text-white font-bold mb-4 text-lg">Our Loans</h5>
+            <ul className="space-y-2 text-sm">
+              <li className="text-gray-300 hover:text-white transition-smooth cursor-pointer">Home Loans</li>
+              <li className="text-gray-300 hover:text-white transition-smooth cursor-pointer">Personal Loans</li>
+              <li className="text-gray-300 hover:text-white transition-smooth cursor-pointer">Car Loans</li>
+              <li className="text-gray-300 hover:text-white transition-smooth cursor-pointer">Business Loans</li>
+              <li className="text-gray-300 hover:text-white transition-smooth cursor-pointer">Education Loans</li>
             </ul>
           </div>
 
-          {/* Contact Info */}
-          <div className="group hover-lift transition-smooth">
-            <h4 className="text-white font-bold mb-4 text-lg group-hover:text-yellow-400 transition-smooth flex items-center gap-2">
-              <span className="text-yellow-400">📍</span> Contact Info
-            </h4>
-            <p className="text-sm mb-4 leading-relaxed">
-              <strong className="text-gray-100 block mb-2">Head Office:</strong>
-              4A, SreeVatsa Swagat Apartment,<br />
-              Patel Road, Ram Nagar,<br />
-              Coimbatore 641009
-            </p>
-            <p className="text-sm leading-relaxed">
-              <strong className="text-gray-100 block mb-2">Branches:</strong>
-              Chennai, Bangalore, Mumbai
-            </p>
+          {/* Contact */}
+          <div>
+            <h5 className="text-white font-bold mb-4 text-lg">Contact Us</h5>
+            <div className="space-y-4 text-sm">
+              <div>
+                <p className="text-gray-400 mb-1">Email</p>
+                <p className="text-gray-300 hover:text-white transition-smooth cursor-pointer">support@cbeloans.com</p>
+              </div>
+              <div>
+                <p className="text-gray-400 mb-1">Phone</p>
+                <p className="text-gray-300 hover:text-white transition-smooth cursor-pointer">+91-XXXX-XXXX-XXXX</p>
+              </div>
+              <div>
+                <p className="text-gray-400 mb-1">Hours</p>
+                <p className="text-gray-300">9 AM - 9 PM IST</p>
+              </div>
+            </div>
           </div>
         </div>
 
-        <hr className="border-gray-700 my-8 opacity-50" />
+        {/* Divider */}
+        <div className="h-px bg-gray-700 mb-8 mx-4"></div>
 
-        <div className="flex flex-col md:flex-row justify-between items-center text-sm px-4 gap-6">
-          <p className="text-gray-400">&copy; 2025 CbeLOANS. All rights reserved.</p>
-          <div className="flex space-x-8">
-            <a href="#privacy" className="text-gray-300 hover:text-yellow-400 transition-smooth font-medium relative group inline-block">
-              Privacy Policy
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 group-hover:w-full transition-all duration-300"></span>
-            </a>
-            <a href="#terms" className="text-gray-300 hover:text-yellow-400 transition-smooth font-medium relative group inline-block">
-              Terms & Conditions
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 group-hover:w-full transition-all duration-300"></span>
-            </a>
-            <a href="#disclaimer" className="text-gray-300 hover:text-yellow-400 transition-smooth font-medium relative group inline-block">
-              Disclaimer
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 group-hover:w-full transition-all duration-300"></span>
-            </a>
+        {/* Bottom Section */}
+        <div className="flex flex-col md:flex-row justify-between items-center px-4 gap-6 text-sm">
+          <div className="text-gray-400">
+            <p>&copy; 2025 CbeLOANS. All rights reserved.</p>
+          </div>
+          <div className="flex gap-8">
+            <Link to="#" className="text-gray-400 hover:text-white transition-smooth">Privacy Policy</Link>
+            <Link to="#" className="text-gray-400 hover:text-white transition-smooth">Terms & Conditions</Link>
+            <Link to="#" className="text-gray-400 hover:text-white transition-smooth">Sitemap</Link>
           </div>
         </div>
       </div>

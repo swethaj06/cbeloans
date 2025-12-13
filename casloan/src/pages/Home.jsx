@@ -54,36 +54,36 @@ export default function Home() {
       <HeroSection />
       
       {/* Key Features */}
-      <section className="py-16 bg-gray-50 w-full">
-        <div className="w-full">
-          <h2 className="text-5xl font-bold text-center mb-4 px-4 animate-fadeInUp">Welcome to CbeLOANS</h2>
-          <p className="text-lg text-center text-gray-600 mb-12 px-4 animate-fadeInUp">Your trusted partner in finding the perfect loan</p>
+      <section className="py-16 bg-white w-full border-b border-gray-200">
+        <div className="w-full max-w-7xl mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-4 px-4 animate-fadeInUp">Why Choose CbeLOANS?</h2>
+          <p className="text-lg text-center text-gray-600 mb-12 px-4 animate-fadeInUp">We make loan comparison easy and transparent</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
-            <div className="text-center bg-white p-8 rounded-xl shadow-md hover:shadow-2xl transition-smooth hover-lift group border border-gray-100">
-              <div className="text-6xl mb-4 group-hover:animate-bounce-slow">🚀</div>
-              <h3 className="text-2xl font-bold mb-3 text-gray-900 group-hover:text-yellow-600 transition-smooth">Fast Approval</h3>
-              <p className="text-gray-600 leading-relaxed">Get loan approval in as little as 24 hours with our streamlined process</p>
+            <div className="text-center bg-blue-50 p-8 rounded-lg border border-blue-100 hover:border-blue-300 transition-smooth group">
+              <div className="text-5xl mb-4">⚡</div>
+              <h3 className="text-xl font-bold mb-3 text-gray-900">Quick & Easy</h3>
+              <p className="text-gray-700 leading-relaxed">Get loan approval in 24-48 hours with minimal documentation</p>
             </div>
-            <div className="text-center bg-white p-8 rounded-xl shadow-md hover:shadow-2xl transition-smooth hover-lift group border border-gray-100">
-              <div className="text-6xl mb-4 group-hover:animate-bounce-slow">🏦</div>
-              <h3 className="text-2xl font-bold mb-3 text-gray-900 group-hover:text-yellow-600 transition-smooth">150+ Partners</h3>
-              <p className="text-gray-600 leading-relaxed">Access loans from leading banks and NBFCs across the country</p>
+            <div className="text-center bg-blue-50 p-8 rounded-lg border border-blue-100 hover:border-blue-300 transition-smooth group">
+              <div className="text-5xl mb-4">🔍</div>
+              <h3 className="text-xl font-bold mb-3 text-gray-900">Compare & Save</h3>
+              <p className="text-gray-700 leading-relaxed">Compare 150+ loan products and get the best rates</p>
             </div>
-            <div className="text-center bg-white p-8 rounded-xl shadow-md hover:shadow-2xl transition-smooth hover-lift group border border-gray-100">
-              <div className="text-6xl mb-4 group-hover:animate-bounce-slow">💰</div>
-              <h3 className="text-2xl font-bold mb-3 text-gray-900 group-hover:text-yellow-600 transition-smooth">Zero Commission</h3>
-              <p className="text-gray-600 leading-relaxed">No extra charges, completely free consultation and support</p>
+            <div className="text-center bg-blue-50 p-8 rounded-lg border border-blue-100 hover:border-blue-300 transition-smooth group">
+              <div className="text-5xl mb-4">🛡️</div>
+              <h3 className="text-xl font-bold mb-3 text-gray-900">Safe & Secure</h3>
+              <p className="text-gray-700 leading-relaxed">ISO certified with industry-best security controls</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Loan Products */}
-      <section id="products" className="py-20 bg-white w-full">
-        <div className="w-full">
-          <h2 className="text-5xl font-bold text-center text-gray-800 mb-4 px-4 animate-fadeInUp">Our Loan Products</h2>
-          <p className="text-lg text-center text-gray-600 mb-12 px-4 animate-fadeInUp">Explore our wide range of loan products designed to meet every financial need</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+      <section id="products" className="py-16 bg-gray-50 w-full">
+        <div className="w-full max-w-7xl mx-auto">
+          <h2 className="text-4xl font-bold text-center text-gray-900 mb-4 px-4 animate-fadeInUp">Our Loan Products</h2>
+          <p className="text-lg text-center text-gray-600 mb-12 px-4 animate-fadeInUp">Explore a wide range of loans designed for your needs</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
             {products.map((product, index) => (
               <div key={index} style={{ animation: `fadeInUp 0.8s ease-out ${index * 0.1}s both` }}>
                 <LoanCard title={product.title} description={product.description} icon={product.icon} />
