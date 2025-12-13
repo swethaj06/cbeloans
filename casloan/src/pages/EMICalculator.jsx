@@ -95,7 +95,7 @@ export default function EMICalculator() {
 
           {/* Results */}
           <div className="space-y-4">
-            <div className="bg-gradient-to-br from-yellow-400 to-yellow-500 text-gray-900 rounded-lg shadow-lg p-8">
+            <div className="bg-linear-to-br from-yellow-400 to-yellow-500 text-gray-900 rounded-lg shadow-lg p-8">
               <h3 className="text-lg font-semibold mb-4">Your Monthly EMI</h3>
               <p className="text-5xl font-bold mb-2">₹{emi.toLocaleString()}</p>
               <p className="text-gray-800">Per Month</p>
@@ -127,7 +127,7 @@ export default function EMICalculator() {
               </div>
             </div>
 
-            <button className="w-full bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 py-3 rounded-lg hover:from-yellow-500 hover:to-yellow-600 transition font-bold text-lg shadow-lg">
+            <button className="w-full bg-linear-to-r from-yellow-400 to-yellow-500 text-gray-900 py-3 rounded-lg hover:from-yellow-500 hover:to-yellow-600 transition font-bold text-lg shadow-lg">
               Apply Now
             </button>
           </div>
