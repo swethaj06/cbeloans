@@ -120,7 +120,7 @@ export default function AboutUs() {
                         {area.title}
                       </h3>
 
-                      <p className="text-gray-600 text-sm leading-relaxed flex-grow group-hover:text-gray-700 transition-colors duration-300">
+                      <p className="text-gray-600 text-sm leading-relaxed grow group-hover:text-gray-700 transition-colors duration-300">
                         {area.description}
                       </p>
 
@@ -175,7 +175,7 @@ export default function AboutUs() {
                 <div className="h-1.5 w-20 bg-linear-to-r from-blue-600 to-indigo-600"></div>
                 <h2 className="text-4xl font-black text-gray-900">MaxDSA Business Services</h2>
               </div>
-              <p className="text-xl text-blue-600 font-bold mb-8 text-lg">Transforming Financial Services</p>
+              <p className="text-xl text-blue-600 font-bold mb-8">Transforming Financial Services</p>
               
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                 <strong className="text-blue-600">Registration:</strong> U82990TZ2025PTC035993

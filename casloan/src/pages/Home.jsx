@@ -65,7 +65,7 @@ export default function Home() {
                 <div className="absolute -top-2 left-1/2 -translate-x-1/2 bg-emerald-50 text-emerald-700 text-xs font-bold px-3 py-1.5 rounded-lg whitespace-nowrap border border-emerald-200 shadow-sm">
                   Cashback Offer
                 </div>
-                <div className="w-20 h-20 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 border border-blue-200/50">
+                <div className="w-20 h-20 bg-linear-to-br from-blue-50 to-blue-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 border border-blue-200/50">
                   <span className="text-3xl">💰</span>
                 </div>
               </div>
@@ -78,7 +78,7 @@ export default function Home() {
                 <div className="absolute -top-2 left-1/2 -translate-x-1/2 bg-emerald-50 text-emerald-700 text-xs font-bold px-3 py-1.5 rounded-lg whitespace-nowrap border border-emerald-200 shadow-sm">
                   5% Cashback
                 </div>
-                <div className="w-20 h-20 bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 border border-purple-200/50">
+                <div className="w-20 h-20 bg-linear-to-br from-purple-50 to-purple-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 border border-purple-200/50">
                   <span className="text-3xl">💳</span>
                 </div>
               </div>
@@ -91,7 +91,7 @@ export default function Home() {
                 <div className="absolute -top-2 left-1/2 -translate-x-1/2 bg-emerald-50 text-emerald-700 text-xs font-bold px-3 py-1.5 rounded-lg whitespace-nowrap border border-emerald-200 shadow-sm">
                   Cashback Offer
                 </div>
-                <div className="w-20 h-20 bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 border border-orange-200/50">
+                <div className="w-20 h-20 bg-linear-to-br from-orange-50 to-orange-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 border border-orange-200/50">
                   <span className="text-3xl">💼</span>
                 </div>
               </div>
@@ -101,7 +101,7 @@ export default function Home() {
             {/* Home Loan */}
             <div className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
               <div className="relative h-32 flex items-end justify-center mb-3">
-                <div className="w-20 h-20 bg-gradient-to-br from-pink-50 to-pink-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 border border-pink-200/50">
+                <div className="w-20 h-20 bg-linear-to-br from-pink-50 to-pink-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 border border-pink-200/50">
                   <span className="text-3xl">🏠</span>
                 </div>
               </div>
@@ -111,7 +111,7 @@ export default function Home() {
             {/* Loan Against Property */}
             <div className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
               <div className="relative h-32 flex items-end justify-center mb-3">
-                <div className="w-20 h-20 bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 border border-teal-200/50">
+                <div className="w-20 h-20 bg-linear-to-br from-teal-50 to-teal-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 border border-teal-200/50">
                   <span className="text-3xl">🏢</span>
                 </div>
               </div>
@@ -121,7 +121,7 @@ export default function Home() {
             {/* Transfer Home Loan */}
             <div className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
               <div className="relative h-32 flex items-end justify-center mb-3">
-                <div className="w-20 h-20 bg-gradient-to-br from-cyan-50 to-cyan-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 border border-cyan-200/50">
+                <div className="w-20 h-20 bg-linear-to-br from-cyan-50 to-cyan-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 border border-cyan-200/50">
                   <span className="text-3xl">🔄</span>
                 </div>
               </div>
@@ -131,7 +131,7 @@ export default function Home() {
             {/* Instant Personal Loan */}
             <div className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
               <div className="relative h-32 flex items-end justify-center mb-3">
-                <div className="w-20 h-20 bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 border border-yellow-200/50">
+                <div className="w-20 h-20 bg-linear-to-br from-yellow-50 to-yellow-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 border border-yellow-200/50">
                   <span className="text-3xl">⚡</span>
                 </div>
               </div>
@@ -141,7 +141,7 @@ export default function Home() {
             {/* Cashback Cards */}
             <div className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
               <div className="relative h-32 flex items-end justify-center mb-3">
-                <div className="w-20 h-20 bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 border border-indigo-200/50">
+                <div className="w-20 h-20 bg-linear-to-br from-indigo-50 to-indigo-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 border border-indigo-200/50">
                   <span className="text-3xl">💎</span>
                 </div>
               </div>
@@ -166,7 +166,7 @@ export default function Home() {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-6 md:gap-8">
             {/* Credit Score */}
             <div className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
-              <div className="w-20 h-20 bg-gradient-to-br from-green-50 to-green-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 mb-3 border border-green-200/50">
+              <div className="w-20 h-20 bg-linear-to-br from-green-50 to-green-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 mb-3 border border-green-200/50">
                 <span className="text-3xl">📊</span>
               </div>
               <span className="text-sm font-semibold text-slate-800 text-center leading-snug h-10 flex items-center">Credit Score</span>
@@ -174,7 +174,7 @@ export default function Home() {
 
             {/* Credit Health Pro */}
             <div className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
-              <div className="w-20 h-20 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 mb-3 border border-blue-200/50">
+              <div className="w-20 h-20 bg-linear-to-br from-blue-50 to-blue-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 mb-3 border border-blue-200/50">
                 <span className="text-3xl">📈</span>
               </div>
               <span className="text-sm font-semibold text-slate-800 text-center leading-snug h-10 flex items-center px-1">Credit Health Pro</span>
@@ -182,7 +182,7 @@ export default function Home() {
 
             {/* Video Credit Report */}
             <div className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
-              <div className="w-20 h-20 bg-gradient-to-br from-red-50 to-red-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 mb-3 border border-red-200/50">
+              <div className="w-20 h-20 bg-linear-to-br from-red-50 to-red-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 mb-3 border border-red-200/50">
                 <span className="text-3xl">📹</span>
               </div>
               <span className="text-sm font-semibold text-slate-800 text-center leading-snug h-10 flex items-center px-1">Video Credit Report</span>
@@ -190,7 +190,7 @@ export default function Home() {
 
             {/* PB Money */}
             <div className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
-              <div className="w-20 h-20 bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 mb-3 border border-yellow-200/50">
+              <div className="w-20 h-20 bg-linear-to-br from-yellow-50 to-yellow-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 mb-3 border border-yellow-200/50">
                 <span className="text-3xl">💰</span>
               </div>
               <span className="text-sm font-semibold text-slate-800 text-center leading-snug h-10 flex items-center">PB Money</span>
@@ -198,7 +198,7 @@ export default function Home() {
 
             {/* Credit Card Bill */}
             <div className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
-              <div className="w-20 h-20 bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 mb-3 border border-slate-200/50">
+              <div className="w-20 h-20 bg-linear-to-br from-slate-50 to-slate-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 mb-3 border border-slate-200/50">
                 <span className="text-3xl">💳</span>
               </div>
               <span className="text-sm font-semibold text-slate-800 text-center leading-snug h-10 flex items-center px-1">Credit Card Bill</span>
@@ -206,7 +206,7 @@ export default function Home() {
 
             {/* Loan Repayment */}
             <div className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
-              <div className="w-20 h-20 bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 mb-3 border border-emerald-200/50">
+              <div className="w-20 h-20 bg-linear-to-br from-emerald-50 to-emerald-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 mb-3 border border-emerald-200/50">
                 <span className="text-3xl">💵</span>
               </div>
               <span className="text-sm font-semibold text-slate-800 text-center leading-snug h-10 flex items-center px-1">Loan Repayment</span>
@@ -214,7 +214,7 @@ export default function Home() {
 
             {/* Electricity Bill */}
             <div className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
-              <div className="w-20 h-20 bg-gradient-to-br from-amber-50 to-amber-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 mb-3 border border-amber-200/50">
+              <div className="w-20 h-20 bg-linear-to-br from-amber-50 to-amber-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 mb-3 border border-amber-200/50">
                 <span className="text-3xl">💡</span>
               </div>
               <span className="text-sm font-semibold text-slate-800 text-center leading-snug h-10 flex items-center">Electricity Bill</span>
@@ -222,7 +222,7 @@ export default function Home() {
 
             {/* Explore More */}
             <div className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
-              <div className="w-20 h-20 bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 mb-3 border border-purple-200/50">
+              <div className="w-20 h-20 bg-linear-to-br from-purple-50 to-purple-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 mb-3 border border-purple-200/50">
                 <span className="text-3xl">🔍</span>
               </div>
               <span className="text-sm font-semibold text-slate-800 text-center leading-snug h-10 flex items-center">Explore More</span>
@@ -243,7 +243,7 @@ export default function Home() {
                 <div className="absolute -top-2 left-1/2 -translate-x-1/2 bg-emerald-50 text-emerald-700 text-xs font-bold px-3 py-1.5 rounded-lg whitespace-nowrap border border-emerald-200 shadow-sm z-10">
                   Invest & Earn
                 </div>
-                <div className="w-20 h-20 bg-gradient-to-br from-green-50 to-green-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 border border-green-200/50">
+                <div className="w-20 h-20 bg-linear-to-br from-green-50 to-green-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 border border-green-200/50">
                   <span className="text-3xl">📜</span>
                 </div>
               </div>
@@ -278,7 +278,7 @@ export default function Home() {
             {/* National Pension Scheme */}
             <div className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
               <div className="h-36 flex items-end justify-center mb-2">
-                <div className="w-20 h-20 bg-gradient-to-br from-red-50 to-red-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 border border-red-200/50">
+                <div className="w-20 h-20 bg-linear-to-br from-red-50 to-red-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 border border-red-200/50">
                   <span className="text-3xl">🏛️</span>
                 </div>
               </div>
@@ -304,7 +304,7 @@ export default function Home() {
                 <div className="absolute -top-2 left-1/2 -translate-x-1/2 bg-emerald-50 text-emerald-700 text-xs font-bold px-3 py-1.5 rounded-lg whitespace-nowrap border border-emerald-200 shadow-sm z-10">
                   0% GST
                 </div>
-                <div className="w-20 h-20 bg-gradient-to-br from-sky-50 to-sky-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 border border-sky-200/50">
+                <div className="w-20 h-20 bg-linear-to-br from-sky-50 to-sky-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 border border-sky-200/50">
                   <span className="text-3xl">☂️</span>
                 </div>
               </div>
@@ -327,7 +327,7 @@ export default function Home() {
             {/* All Insurance Products */}
             <div className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
               <div className="h-36 flex items-end justify-center mb-2">
-                <div className="w-20 h-20 bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 border border-slate-200/50">
+                <div className="w-20 h-20 bg-linear-to-br from-slate-50 to-slate-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 border border-slate-200/50">
                   <span className="text-3xl">📋</span>
                 </div>
               </div>
