@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import logo from '../assets/logo-light.svg';
 
 export default function Footer() {
   return (
@@ -7,9 +8,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12 px-4">
           {/* Company Info */}
           <div>
-            <h4 className="text-2xl font-bold text-white mb-4">
-              🏦 CbeLOANS
-            </h4>
+            <div className="mb-4">
+              <img src={logo} alt="CBE LOAN - Financial Solutions" className="h-16 mb-4" />
+            </div>
             <p className="text-sm leading-relaxed mb-6">
               India's trusted platform for loans, cards & investments. Compare 150+ products from leading banks.
             </p>
