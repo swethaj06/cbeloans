@@ -73,7 +73,7 @@ export default function Home() {
           
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-6 md:gap-8">
             {/* Personal Loan */}
-            <div className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
+            <Link to="/contact" className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
               <div className="relative h-32 flex items-end justify-center mb-3">
                 <div className="absolute -top-2 left-1/2 -translate-x-1/2 bg-emerald-50 text-emerald-700 text-xs font-bold px-3 py-1.5 rounded-lg whitespace-nowrap border border-emerald-200 shadow-sm">
                   Cashback Offer
@@ -83,10 +83,10 @@ export default function Home() {
                 </div>
               </div>
               <span className="text-sm font-semibold text-slate-800 text-center leading-snug h-10 flex items-center">Personal Loan</span>
-            </div>
+            </Link>
 
             {/* Credit Cards */}
-            <div className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
+            <Link to="/contact" className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
               <div className="relative h-32 flex items-end justify-center mb-3">
                 <div className="absolute -top-2 left-1/2 -translate-x-1/2 bg-emerald-50 text-emerald-700 text-xs font-bold px-3 py-1.5 rounded-lg whitespace-nowrap border border-emerald-200 shadow-sm">
                   5% Cashback
@@ -96,10 +96,10 @@ export default function Home() {
                 </div>
               </div>
               <span className="text-sm font-semibold text-slate-800 text-center leading-snug h-10 flex items-center">Credit Cards</span>
-            </div>
+            </Link>
 
             {/* Business Loan */}
-            <div className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
+            <Link to="/contact" className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
               <div className="relative h-32 flex items-end justify-center mb-3">
                 <div className="absolute -top-2 left-1/2 -translate-x-1/2 bg-emerald-50 text-emerald-700 text-xs font-bold px-3 py-1.5 rounded-lg whitespace-nowrap border border-emerald-200 shadow-sm">
                   Cashback Offer
@@ -109,57 +109,57 @@ export default function Home() {
                 </div>
               </div>
               <span className="text-sm font-semibold text-slate-800 text-center leading-snug h-10 flex items-center">Business Loan</span>
-            </div>
+            </Link>
 
             {/* Home Loan */}
-            <div className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
+            <Link to="/contact" className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
               <div className="relative h-32 flex items-end justify-center mb-3">
                 <div className="w-20 h-20 bg-linear-to-br from-pink-50 to-pink-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 border border-pink-200/50">
                   <span className="text-3xl">🏠</span>
                 </div>
               </div>
               <span className="text-sm font-semibold text-slate-800 text-center leading-snug h-10 flex items-center">Home Loan</span>
-            </div>
+            </Link>
 
             {/* Loan Against Property */}
-            <div className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
+            <Link to="/contact" className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
               <div className="relative h-32 flex items-end justify-center mb-3">
                 <div className="w-20 h-20 bg-linear-to-br from-teal-50 to-teal-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 border border-teal-200/50">
                   <span className="text-3xl">🏢</span>
                 </div>
               </div>
               <span className="text-sm font-semibold text-slate-800 text-center leading-snug h-10 flex items-center px-1">Loan Against Property</span>
-            </div>
+            </Link>
 
             {/* Transfer Home Loan */}
-            <div className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
+            <Link to="/contact" className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
               <div className="relative h-32 flex items-end justify-center mb-3">
                 <div className="w-20 h-20 bg-linear-to-br from-cyan-50 to-cyan-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 border border-cyan-200/50">
                   <span className="text-3xl">🔄</span>
                 </div>
               </div>
               <span className="text-sm font-semibold text-slate-800 text-center leading-snug h-10 flex items-center px-1">Transfer Home Loan</span>
-            </div>
+            </Link>
 
             {/* Instant Personal Loan */}
-            <div className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
+            <Link to="/contact" className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
               <div className="relative h-32 flex items-end justify-center mb-3">
                 <div className="w-20 h-20 bg-linear-to-br from-yellow-50 to-yellow-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 border border-yellow-200/50">
                   <span className="text-3xl">⚡</span>
                 </div>
               </div>
               <span className="text-sm font-semibold text-slate-800 text-center leading-snug h-10 flex items-center px-1">Instant Personal Loan</span>
-            </div>
+            </Link>
 
             {/* Cashback Cards */}
-            <div className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
+            <Link to="/contact" className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
               <div className="relative h-32 flex items-end justify-center mb-3">
                 <div className="w-20 h-20 bg-linear-to-br from-indigo-50 to-indigo-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 border border-indigo-200/50">
                   <span className="text-3xl">💎</span>
                 </div>
               </div>
               <span className="text-sm font-semibold text-slate-800 text-center leading-snug h-10 flex items-center">Cashback Cards</span>
-            </div>
+            </Link>
           </div>
         </div>
       </section>
@@ -178,68 +178,68 @@ export default function Home() {
           
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-6 md:gap-8">
             {/* Credit Score */}
-            <div className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
+            <Link to="/contact" className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
               <div className="w-20 h-20 bg-linear-to-br from-green-50 to-green-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 mb-3 border border-green-200/50">
                 <span className="text-3xl">📊</span>
               </div>
               <span className="text-sm font-semibold text-slate-800 text-center leading-snug h-10 flex items-center">Credit Score</span>
-            </div>
+            </Link>
 
             {/* Credit Health Pro */}
-            <div className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
+            <Link to="/contact" className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
               <div className="w-20 h-20 bg-linear-to-br from-blue-50 to-blue-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 mb-3 border border-blue-200/50">
                 <span className="text-3xl">📈</span>
               </div>
               <span className="text-sm font-semibold text-slate-800 text-center leading-snug h-10 flex items-center px-1">Credit Health Pro</span>
-            </div>
+            </Link>
 
             {/* Video Credit Report */}
-            <div className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
+            <Link to="/contact" className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
               <div className="w-20 h-20 bg-linear-to-br from-red-50 to-red-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 mb-3 border border-red-200/50">
                 <span className="text-3xl">📹</span>
               </div>
               <span className="text-sm font-semibold text-slate-800 text-center leading-snug h-10 flex items-center px-1">Video Credit Report</span>
-            </div>
+            </Link>
 
             {/* PB Money */}
-            <div className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
+            <Link to="/contact" className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
               <div className="w-20 h-20 bg-linear-to-br from-yellow-50 to-yellow-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 mb-3 border border-yellow-200/50">
                 <span className="text-3xl">💰</span>
               </div>
               <span className="text-sm font-semibold text-slate-800 text-center leading-snug h-10 flex items-center">PB Money</span>
-            </div>
+            </Link>
 
             {/* Credit Card Bill */}
-            <div className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
+            <Link to="/contact" className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
               <div className="w-20 h-20 bg-linear-to-br from-slate-50 to-slate-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 mb-3 border border-slate-200/50">
                 <span className="text-3xl">💳</span>
               </div>
               <span className="text-sm font-semibold text-slate-800 text-center leading-snug h-10 flex items-center px-1">Credit Card Bill</span>
-            </div>
+            </Link>
 
             {/* Loan Repayment */}
-            <div className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
+            <Link to="/contact" className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
               <div className="w-20 h-20 bg-linear-to-br from-emerald-50 to-emerald-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 mb-3 border border-emerald-200/50">
                 <span className="text-3xl">💵</span>
               </div>
               <span className="text-sm font-semibold text-slate-800 text-center leading-snug h-10 flex items-center px-1">Loan Repayment</span>
-            </div>
+            </Link>
 
             {/* Electricity Bill */}
-            <div className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
+            <Link to="/contact" className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
               <div className="w-20 h-20 bg-linear-to-br from-amber-50 to-amber-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 mb-3 border border-amber-200/50">
                 <span className="text-3xl">💡</span>
               </div>
               <span className="text-sm font-semibold text-slate-800 text-center leading-snug h-10 flex items-center">Electricity Bill</span>
-            </div>
+            </Link>
 
             {/* Explore More */}
-            <div className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
+            <Link to="/contact" className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
               <div className="w-20 h-20 bg-linear-to-br from-purple-50 to-purple-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 mb-3 border border-purple-200/50">
                 <span className="text-3xl">🔍</span>
               </div>
               <span className="text-sm font-semibold text-slate-800 text-center leading-snug h-10 flex items-center">Explore More</span>
-            </div>
+            </Link>
           </div>
         </div>
       </section>
@@ -251,7 +251,7 @@ export default function Home() {
           
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-9 gap-6 md:gap-8">
             {/* Bonds */}
-            <div className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
+            <Link to="/contact" className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
               <div className="relative h-36 flex items-end justify-center mb-2">
                 <div className="absolute -top-2 left-1/2 -translate-x-1/2 bg-emerald-50 text-emerald-700 text-xs font-bold px-3 py-1.5 rounded-lg whitespace-nowrap border border-emerald-200 shadow-sm z-10">
                   Invest & Earn
@@ -262,10 +262,10 @@ export default function Home() {
               </div>
               <span className="text-sm font-semibold text-slate-800 text-center leading-snug mb-1">Bonds</span>
               <span className="text-xs text-slate-600 text-center">SEBI Regulated</span>
-            </div>
+            </Link>
 
             {/* Fixed Deposits */}
-            <div className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
+            <Link to="/contact" className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
               <div className="relative h-36 flex items-end justify-center mb-2">
                 <div className="absolute -top-2 left-1/2 -translate-x-1/2 bg-emerald-50 text-emerald-700 text-xs font-bold px-3 py-1.5 rounded-lg whitespace-nowrap border border-emerald-200 shadow-sm z-10">
                   Newly Launched
@@ -276,30 +276,30 @@ export default function Home() {
               </div>
               <span className="text-sm font-semibold text-slate-800 text-center leading-snug mb-1 px-1">Fixed Deposits</span>
               <span className="text-xs text-slate-600 text-center">Earn upto 8%</span>
-            </div>
+            </Link>
 
             {/* Market Linked Plans */}
-            <div className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
+            <Link to="/contact" className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
               <div className="h-36 flex items-end justify-center mb-2">
                 <div className="w-20 h-20 bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 border border-purple-200/50">
                   <span className="text-3xl">📊</span>
                 </div>
               </div>
               <span className="text-sm font-semibold text-slate-800 text-center leading-snug px-1">Market Linked Plans</span>
-            </div>
+            </Link>
 
             {/* National Pension Scheme */}
-            <div className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
+            <Link to="/contact" className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
               <div className="h-36 flex items-end justify-center mb-2">
                 <div className="w-20 h-20 bg-linear-to-br from-red-50 to-red-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 border border-red-200/50">
                   <span className="text-3xl">🏛️</span>
                 </div>
               </div>
               <span className="text-sm font-semibold text-slate-800 text-center leading-snug px-1">National Pension Scheme</span>
-            </div>
+            </Link>
 
             {/* Health Insurance */}
-            <div className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
+            <Link to="/contact" className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
               <div className="relative h-36 flex items-end justify-center mb-2">
                 <div className="absolute -top-2 left-1/2 -translate-x-1/2 bg-emerald-50 text-emerald-700 text-xs font-bold px-3 py-1.5 rounded-lg whitespace-nowrap border border-emerald-200 shadow-sm z-10">
                   0% GST
@@ -309,10 +309,10 @@ export default function Home() {
                 </div>
               </div>
               <span className="text-sm font-semibold text-slate-800 text-center leading-snug px-1">Health Insurance</span>
-            </div>
+            </Link>
 
             {/* Term Life Insurance */}
-            <div className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
+            <Link to="/contact" className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
               <div className="relative h-36 flex items-end justify-center mb-2">
                 <div className="absolute -top-2 left-1/2 -translate-x-1/2 bg-emerald-50 text-emerald-700 text-xs font-bold px-3 py-1.5 rounded-lg whitespace-nowrap border border-emerald-200 shadow-sm z-10">
                   0% GST
@@ -322,10 +322,10 @@ export default function Home() {
                 </div>
               </div>
               <span className="text-sm font-semibold text-slate-800 text-center leading-snug px-1">Term Life Insurance</span>
-            </div>
+            </Link>
 
             {/* Car Insurance */}
-            <div className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
+            <Link to="/contact" className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
               <div className="relative h-36 flex items-end justify-center mb-2">
                 <div className="absolute -top-2 left-1/2 -translate-x-1/2 bg-emerald-50 text-emerald-700 text-xs font-bold px-3 py-1.5 rounded-lg whitespace-nowrap border border-emerald-200 shadow-sm z-10">
                   Lowest Price
@@ -335,17 +335,17 @@ export default function Home() {
                 </div>
               </div>
               <span className="text-sm font-semibold text-slate-800 text-center leading-snug">Car Insurance</span>
-            </div>
+            </Link>
 
             {/* All Insurance Products */}
-            <div className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
+            <Link to="/contact" className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:transform hover:-translate-y-1">
               <div className="h-36 flex items-end justify-center mb-2">
                 <div className="w-20 h-20 bg-linear-to-br from-slate-50 to-slate-100 rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 border border-slate-200/50">
                   <span className="text-3xl">📋</span>
                 </div>
               </div>
               <span className="text-sm font-semibold text-slate-800 text-center leading-snug px-1">All Insurance Products</span>
-            </div>
+            </Link>
           </div>
         </div>
       </section>
