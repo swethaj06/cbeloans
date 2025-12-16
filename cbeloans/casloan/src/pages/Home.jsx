@@ -19,13 +19,15 @@ import yesLogo from '../assets/Yes_Bank.png';
 
 export default function Home() {
   const [principal, setPrincipal] = useState(1000000);
-  const [rate, setRate] = useState(8.5);
+  const [rate, setRate] = useState('8.5');
   const [tenure, setTenure] = useState(20);
 
   const calculateEMI = () => {
     const p = parseFloat(principal);
-    const r = parseFloat(rate) / 12 / 100;
+    // fallback to 0 if rate is empty or invalid
+    const r = parseFloat(rate) ? parseFloat(rate) / 12 / 100 : 0;
     const n = parseFloat(tenure) * 12;
+    if (!isFinite(p) || !isFinite(r) || !isFinite(n) || n === 0) return 0;
     if (r === 0) return Math.round(p / n);
     const emi = Math.round((p * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1));
     return emi;
@@ -463,14 +465,23 @@ export default function Home() {
                 />
               </div>
               <div className="mb-8 relative">
-                <label className="block text-gray-800 font-bold mb-3 text-lg">Interest Rate: <span className="text-yellow-600">{rate.toFixed(2)}% p.a.</span></label>
+                <label className="block text-gray-800 font-bold mb-3 text-lg">Interest Rate: <span className="text-yellow-600">{Number(rate || 0).toFixed(2)}% p.a.</span></label>
                 <input type="range" min="3" max="15" step="0.1" value={rate} onChange={(e) => setRate(e.target.value)} className="w-full h-3 bg-gray-300 rounded-lg appearance-none cursor-pointer hover:bg-gray-400 transition-smooth" />
                 <input 
                   type="text" 
                   value={rate} 
-                  onChange={(e) => setRate(e.target.value === '' ? '' : parseFloat(e.target.value.replace(/[^\d.]/g, '')) || 0)} 
+                  onChange={(e) => {
+                    // Allow only numbers and one dot
+                    let val = e.target.value.replace(/[^\d.]/g, '');
+                    // Prevent multiple dots
+                    if ((val.match(/\./g) || []).length > 1) {
+                      val = val.substring(0, val.length - 1);
+                    }
+                    setRate(val);
+                  }}
                   className="w-full mt-3 px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent text-gray-800" 
                   placeholder="Enter interest rate"
+                  inputMode="decimal"
                 />
               </div>
               <div className="mb-8 relative">

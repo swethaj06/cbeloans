@@ -110,7 +110,7 @@ export default function EMICalculator() {
                 </div>
                 <div className="flex justify-between items-center pb-4 border-b">
                   <span className="text-gray-700">Interest Rate:</span>
-                  <span className="font-bold text-gray-800">{rate.toFixed(2)}% p.a.</span>
+                  <span className="font-bold text-gray-800">{rate.toLocaleString()}% p.a.</span>
                 </div>
                 <div className="flex justify-between items-center pb-4 border-b">
                   <span className="text-gray-700">Tenure:</span>
