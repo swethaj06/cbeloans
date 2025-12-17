@@ -1,7 +1,14 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import logo from '../assets/logo-light.svg';
 
 export default function Footer() {
+  const navigate = useNavigate();
+
+  // Scroll to top and navigate for quick links
+  const handleQuickLink = (to) => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    navigate(to);
+  };
   return (
     <footer className="bg-gray-900 text-gray-300 py-16 w-full">
       <div className="w-full max-w-7xl mx-auto">
@@ -15,9 +22,14 @@ export default function Footer() {
               India's trusted platform for loans, cards & investments. Compare 150+ products from leading banks.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-smooth">f</a>
-              <a href="#" className="text-gray-400 hover:text-white transition-smooth">𝕏</a>
-              <a href="#" className="text-gray-400 hover:text-white transition-smooth">in</a>
+              <a href="https://www.linkedin.com/in/yuvapadmanabhan/" target="_blank" rel="noopener noreferrer" className="group relative text-gray-400 hover:text-white transition-smooth rounded-full bg-gray-800 p-2 shadow-lg hover:bg-blue-700" aria-label="LinkedIn 1">
+                <span className="absolute inset-0 rounded-full blur-md opacity-60 group-hover:opacity-90 group-hover:blur-lg" style={{background: 'radial-gradient(circle, #0a66c2 0%, #1e293b 80%)'}}></span>
+                <svg className="relative z-10" width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11.75 20h-3v-10h3v10zm-1.5-11.25c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm15.25 11.25h-3v-5.5c0-1.104-.896-2-2-2s-2 .896-2 2v5.5h-3v-10h3v1.354c.417-.646 1.18-1.354 2.25-1.354 1.933 0 3.5 1.567 3.5 3.5v6.5z"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/in/arun-kumar-manickam-b7476150/" target="_blank" rel="noopener noreferrer" className="group relative text-gray-400 hover:text-white transition-smooth rounded-full bg-gray-800 p-2 shadow-lg hover:bg-blue-700" aria-label="LinkedIn 2">
+                <span className="absolute inset-0 rounded-full blur-md opacity-60 group-hover:opacity-90 group-hover:blur-lg" style={{background: 'radial-gradient(circle, #0a66c2 0%, #1e293b 80%)'}}></span>
+                <svg className="relative z-10" width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11.75 20h-3v-10h3v10zm-1.5-11.25c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm15.25 11.25h-3v-5.5c0-1.104-.896-2-2-2s-2 .896-2 2v5.5h-3v-10h3v1.354c.417-.646 1.18-1.354 2.25-1.354 1.933 0 3.5 1.567 3.5 3.5v6.5z"/></svg>
+              </a>
             </div>
           </div>
 
@@ -25,10 +37,38 @@ export default function Footer() {
           <div>
             <h5 className="text-white font-bold mb-4 text-lg">Quick Links</h5>
             <ul className="space-y-3 text-sm">
-              <li><Link to="/about" className="text-gray-300 hover:text-white transition-smooth">About Us</Link></li>
-              <li><Link to="/why-us" className="text-gray-300 hover:text-white transition-smooth">Why Us</Link></li>
-              <li><Link to="/products" className="text-gray-300 hover:text-white transition-smooth">Products</Link></li>
-              <li><Link to="/contact" className="text-gray-300 hover:text-white transition-smooth">Contact</Link></li>
+              <li>
+                <button
+                  onClick={() => handleQuickLink('/about')}
+                  className="text-gray-300 hover:text-white transition-smooth bg-transparent border-none p-0 m-0 cursor-pointer"
+                >
+                  About Us
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => handleQuickLink('/why-us')}
+                  className="text-gray-300 hover:text-white transition-smooth bg-transparent border-none p-0 m-0 cursor-pointer"
+                >
+                  Why Us
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => handleQuickLink('/products')}
+                  className="text-gray-300 hover:text-white transition-smooth bg-transparent border-none p-0 m-0 cursor-pointer"
+                >
+                  Products
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => handleQuickLink('/contact')}
+                  className="text-gray-300 hover:text-white transition-smooth bg-transparent border-none p-0 m-0 cursor-pointer"
+                >
+                  Contact
+                </button>
+              </li>
             </ul>
           </div>
 
@@ -36,11 +76,16 @@ export default function Footer() {
           <div>
             <h5 className="text-white font-bold mb-4 text-lg">Our Loans</h5>
             <ul className="space-y-2 text-sm">
-              <li className="text-gray-300 hover:text-white transition-smooth cursor-pointer">Home Loans</li>
-              <li className="text-gray-300 hover:text-white transition-smooth cursor-pointer">Personal Loans</li>
-              <li className="text-gray-300 hover:text-white transition-smooth cursor-pointer">Car Loans</li>
-              <li className="text-gray-300 hover:text-white transition-smooth cursor-pointer">Business Loans</li>
-              <li className="text-gray-300 hover:text-white transition-smooth cursor-pointer">Education Loans</li>
+              {['Home Loans', 'Personal Loans', 'Car Loans', 'Business Loans', 'Education Loans'].map((loan, idx) => (
+                <li key={loan}>
+                  <button
+                    onClick={() => handleQuickLink('/products')}
+                    className="text-gray-300 hover:text-white transition-smooth bg-transparent border-none p-0 m-0 cursor-pointer"
+                  >
+                    {loan}
+                  </button>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -50,11 +95,11 @@ export default function Footer() {
             <div className="space-y-4 text-sm">
               <div>
                 <p className="text-gray-400 mb-1">Email</p>
-                <p className="text-gray-300 hover:text-white transition-smooth cursor-pointer">support@cbeloans.com</p>
+                <p className="text-gray-300 hover:text-white transition-smooth cursor-pointer">cbeloans25@gmail.com</p>
               </div>
               <div>
                 <p className="text-gray-400 mb-1">Phone</p>
-                <p className="text-gray-300 hover:text-white transition-smooth cursor-pointer">+91-XXXX-XXXX-XXXX</p>
+                <p className="text-gray-300 hover:text-white transition-smooth cursor-pointer">+91 9003912395</p>
               </div>
               <div>
                 <p className="text-gray-400 mb-1">Hours</p>
